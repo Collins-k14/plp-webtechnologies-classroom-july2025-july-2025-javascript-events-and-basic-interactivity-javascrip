@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Registration Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Registration Form</h1>
+
+  <!-- 🌗 Dark/Light Mode Toggle -->
+  <button id="themeToggle">Toggle Dark/Light Mode</button>
+
+  <!-- 📋 Registration Form -->
+  <form id="registerForm" novalidate>
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input type="text" id="username">
+      <small class="error" id="usernameError"></small>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email">
+      <small class="error" id="emailError"></small>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password">
+      <small id="togglePassword" class="show-password">Show Password</small>
+      <small class="error" id="passwordError"></small>
+    </div>
+
+    <button type="submit">Register</button>
+  </form>
+
+  <!-- 🧮 Counter -->
+  <div class="counter-box">
+    <p>Total Registrations: <span id="registerCount">0</span></p>
+  </div>
+
+  <!-- ❓ FAQ Section -->
+  <section class="faq">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <button class="faq-question">What is this form for?</button>
+      <div class="faq-answer">
+        <p>This is a demo registration form with interactive features.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Is my data secure?</button>
+      <div class="faq-answer">
+        <p>Yes, this form only simulates a registration process and does not store your data.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Can I switch themes?</button>
+      <div class="faq-answer">
+        <p>Yes! Use the toggle button above to switch between light and dark mode.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 📦 Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p id="modalMessage">🎉 Registration successful!</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
